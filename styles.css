@@ -77,7 +77,8 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
 .review-list li { border-bottom: 1px solid var(--border); padding: 1rem 0; }
 .cv-list { list-style: none; margin: 1.5rem 0 0; padding: 0; }
 .cv-list li { border-top: 1px solid var(--border); padding: 1rem 0; }
-.cv-list small { color: var(--accent); display: block; margin-top: 0.25rem; }
+.cv-list li > strong { display: block; line-height: 1.45; }
+.cv-list small { color: var(--accent); display: block; letter-spacing: 0.02em; margin-top: 0.55rem; }
 .timeline article { border-left: 2px solid var(--accent); margin: 0 0 1.5rem 0.5rem; padding: 0 0 0 1.25rem; }
 .timeline article > div { align-items: baseline; display: flex; gap: 1rem; justify-content: space-between; }
 .timeline time { color: var(--accent); white-space: nowrap; }
