@@ -64,6 +64,7 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
 .info-card { background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; }
 .info-card h3, .publication-list h3, .timeline h3 { margin-top: 0; }
 .publication-list { margin-top: 3rem; }
+.publication-theme { border-left: 3px solid var(--accent); color: var(--accent); margin: 1.5rem 0 0; padding: 0.35rem 0.75rem; }
 .publication-item { border-top: 1px solid var(--border); padding: 1rem 0; }
 .publication-item a { text-decoration: none; }
 .publication-item a:hover, .publication-item a:focus-visible { color: var(--accent); }
@@ -72,6 +73,9 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
 .subsection-title { margin-top: 2.5rem; }
 .review-list { border-top: 1px solid var(--border); list-style: none; margin: 0; padding: 0; }
 .review-list li { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+.cv-list { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.cv-list li { border-top: 1px solid var(--border); padding: 1rem 0; }
+.cv-list small { color: var(--accent); display: block; margin-top: 0.25rem; }
 .timeline article { border-left: 2px solid var(--accent); margin: 0 0 1.5rem 0.5rem; padding: 0 0 0 1.25rem; }
 .timeline article > div { align-items: baseline; display: flex; gap: 1rem; justify-content: space-between; }
 .timeline time { color: var(--accent); white-space: nowrap; }
