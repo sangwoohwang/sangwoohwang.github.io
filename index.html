@@ -7,14 +7,19 @@
     <title>Sangwoo Hwang | AI Systems Researcher</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="game.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#home">Sangwoo Hwang</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
         <a href="#games">Games</a>
       </nav>
     </header>
@@ -23,25 +28,99 @@
       <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">AI Systems Researcher</p>
         <h1 id="hero-title">Efficient intelligence from models to silicon.</h1>
-        <p class="hero-copy">A responsive portfolio shell for research in on-device AI, neuromorphic computing, and NPU-aware optimization.</p>
+        <p class="hero-copy">Bridging advanced AI models and real NPU hardware for energy-efficient on-device and physical AI.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">Explore research</a>
+          <a class="button" href="https://scholar.google.com/citations?user=-K2oND4AAAAJ&amp;hl=ko" rel="noopener">Google Scholar</a>
+        </div>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-title">
-        <p class="eyebrow">About</p>
-        <h2 id="about-title">Profile</h2>
-        <p>Detailed profile content will be added from the latest CV in a later loop.</p>
+        <div class="section-heading"><p class="eyebrow">About</p><h2 id="about-title">Researcher profile</h2></div>
+        <div class="profile-layout">
+          <img class="profile-photo" src="assets/profile.jpg" alt="Sangwoo Hwang profile photo">
+          <div>
+            <p>My research develops hardware-software co-design methods across AI model optimization, NPU architecture, quantization, sparsity, spiking neural networks, processing-in-memory, and chip-level implementation.</p>
+            <p>My ultimate research goal is to enable ultra-low-power Physical AI by leveraging the binary nature of SNNs and full-stack optimization from algorithms to hardware architecture.</p>
+            <div class="tag-list" aria-label="Research interests">
+              <span>On-Device AI</span><span>Neuromorphic Computing</span><span>PIM</span><span>NPU Optimization</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="research" class="section" aria-labelledby="research-title">
         <p class="eyebrow">Research</p>
-        <h2 id="research-title">Research directions</h2>
-        <p>On-device AI, neuromorphic architectures, sparse acceleration, quantization, and processing-in-memory.</p>
+        <h2 id="research-title">From SNNs to silicon</h2>
+        <div class="card-grid">
+          <article class="info-card"><h3>Neuromorphic AI acceleration</h3><p>SNN architectures, sparse event-driven computation, ANN-to-SNN conversion, and 28nm FD-SOI implementation.</p></article>
+          <article class="info-card"><h3>NPU-aware optimization</h3><p>Quantization and runtime methods that respect latency, memory, energy, and NPU compatibility constraints.</p></article>
+          <article class="info-card"><h3>Memory-centric AI</h3><p>PIM architecture and simulation for LLM and edge AI workloads, including 3D NAND Flash PIM research.</p></article>
+        </div>
+        <div class="publication-list">
+          <h3>Selected publications</h3>
+          <a href="https://ieeexplore.ieee.org/document/11408587/" rel="noopener"><span>GustavSNN</span><small>HPCA 2026 (Oral)</small></a>
+          <a href="https://neurips.cc/virtual/2024/poster/94181" rel="noopener"><span>SpikedAttention</span><small>NeurIPS 2024</small></a>
+          <a href="https://icml.cc/virtual/2026/poster/66147" rel="noopener"><span>PsumQuant</span><small>ICML 2026</small></a>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <p class="eyebrow">Experience</p>
+        <h2 id="experience-title">Industry and academic work</h2>
+        <div class="timeline">
+          <article><div><h3>Staff Engineer, System Team</h3><p>Samsung Electronics, MX Division</p></div><time>Mar. 2026 – Present</time><p>System research for mobile agent systems and Galaxy on-device AI, with NPU-aware optimization for commercial mobile environments.</p></article>
+          <article><div><h3>Postdoctoral Researcher</h3><p>Semiconductor Technology Research Institute, Korea University</p></div><time>Mar. 2025 – Feb. 2026</time><p>PIM architecture and simulation research for LLM and edge AI workloads, plus sparse neuromorphic chip architecture design.</p></article>
+          <article><div><h3>Ph.D. in Electrical Engineering and Computer Science</h3><p>Daegu Gyeongbuk Institute of Science and Technology (DGIST)</p></div><time>Mar. 2019 – Feb. 2025</time><p>Integrated M.S./Ph.D. program focused on computer architecture, SNNs, accelerators, and AI systems.</p></article>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">Selected systems</h2>
+        <div class="card-grid">
+          <article class="info-card"><h3>28nm FD-SOI sparse matrix accelerator</h3><p>Designed and validated a sparse matrix computation accelerator for CNN- and Transformer-derived SNN workloads.</p></article>
+          <article class="info-card"><h3>FPGA biological neural replacement</h3><p>Developed a real-time hardware-assisted SNN training and inference environment for biological neural replacement.</p></article>
+          <article class="info-card"><h3>PIM simulation frameworks</h3><p>Developed PIM simulation components for public Hugging Face models and memory-centric AI computation.</p></article>
+        </div>
       </section>
 
       <section id="games" class="section game-placeholder" aria-labelledby="games-title">
         <p class="eyebrow">Games</p>
         <h2 id="games-title">Snake game</h2>
-        <p>The keyboard·touch snake game will be implemented in a later loop.</p>
+        <div class="game-shell">
+          <div class="game-scoreboard" aria-label="Game score">
+            <span>Score <strong id="game-score">0</strong></span>
+            <span>Best <strong id="game-high-score">0</strong></span>
+            <span id="game-status" role="status" aria-live="polite">Ready to play</span>
+          </div>
+          <div class="game-board-wrap">
+            <canvas id="game-board" width="360" height="360" aria-label="Snake game board"></canvas>
+          </div>
+          <div class="game-actions">
+            <button class="button button-primary" id="game-start" type="button">Start</button>
+            <button class="button" id="game-pause" type="button">Pause</button>
+            <button class="button" id="game-restart" type="button">Restart</button>
+          </div>
+          <div class="game-controls" aria-label="Touch controls">
+            <button type="button" data-direction="up" aria-label="Move up">↑</button>
+            <div><button type="button" data-direction="left" aria-label="Move left">←</button><button type="button" data-direction="down" aria-label="Move down">↓</button><button type="button" data-direction="right" aria-label="Move right">→</button></div>
+          </div>
+          <p class="game-help">Use Arrow keys or WASD. Space pauses. Avoid the walls, yourself, and the moving enemy.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Let’s collaborate</h2>
+        <p>I am open to research collaborations in efficient AI systems, neuromorphic computing, and on-device AI.</p>
+        <div class="contact-links">
+          <a class="button button-primary" href="mailto:tomyohan96@gmail.com">tomyohan96@gmail.com</a>
+          <a class="button" href="tel:+82-10-4194-0736">+82-10-4194-0736</a>
+          <a class="button" href="https://sites.google.com/view/sangwoohwang" rel="noopener">Website</a>
+          <a class="button" href="https://linkedin.com/in/sangwoo-hwang-070857223" rel="noopener">LinkedIn</a>
+          <a class="button" href="https://scholar.google.com/citations?user=-K2oND4AAAAJ&amp;hl=ko" rel="noopener">Google Scholar</a>
+        </div>
       </section>
     </main>
   </body>
