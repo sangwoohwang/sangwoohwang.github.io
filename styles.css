@@ -58,16 +58,20 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
 .button:hover, .button:focus-visible { border-color: var(--accent); color: var(--accent); }
 .button-primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .button-primary:hover, .button-primary:focus-visible { background: transparent; color: var(--accent); }
-.profile-layout { align-items: center; display: grid; gap: clamp(1.5rem, 5vw, 4rem); grid-template-columns: minmax(10rem, 18rem) 1fr; }
-.profile-photo { aspect-ratio: 0.78; border: 1px solid var(--border); border-radius: 1rem; object-fit: cover; width: 100%; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
 .tag-list span { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; color: var(--muted); padding: 0.35rem 0.7rem; }
 .card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); }
 .info-card { background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; }
 .info-card h3, .publication-list h3, .timeline h3 { margin-top: 0; }
 .publication-list { margin-top: 3rem; }
-.publication-list a { border-top: 1px solid var(--border); display: flex; gap: 1rem; justify-content: space-between; padding: 1rem 0; text-decoration: none; }
-.publication-list small { color: var(--accent); }
+.publication-item { border-top: 1px solid var(--border); padding: 1rem 0; }
+.publication-item a { text-decoration: none; }
+.publication-item a:hover, .publication-item a:focus-visible { color: var(--accent); }
+.publication-item small, .review-list small { color: var(--accent); display: block; margin-top: 0.35rem; }
+.publication-item p { margin: 0.45rem 0 0; }
+.subsection-title { margin-top: 2.5rem; }
+.review-list { border-top: 1px solid var(--border); list-style: none; margin: 0; padding: 0; }
+.review-list li { border-bottom: 1px solid var(--border); padding: 1rem 0; }
 .timeline article { border-left: 2px solid var(--accent); margin: 0 0 1.5rem 0.5rem; padding: 0 0 0 1.25rem; }
 .timeline article > div { align-items: baseline; display: flex; gap: 1rem; justify-content: space-between; }
 .timeline time { color: var(--accent); white-space: nowrap; }
@@ -99,7 +103,6 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
   .site-header { flex-wrap: wrap; }
   .site-nav { display: none; flex-basis: 100%; flex-direction: column; gap: 0.5rem; }
   .site-nav.is-open { display: flex; }
-  .profile-layout, .card-grid { grid-template-columns: 1fr; }
-  .profile-photo { max-width: 12rem; }
-  .publication-list a, .timeline article > div { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .timeline article > div { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
 }

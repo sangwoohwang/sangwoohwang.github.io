@@ -25,6 +25,7 @@
     nextDirection: directions.right,
     food: null,
     enemy: null,
+    obstacles: [],
     score: 0,
     highScore: Number(window.localStorage.getItem('sangwoo-snake-high-score')) || 0,
     timerId: null,
@@ -36,6 +37,13 @@
 
   const samePoint = (first, second) => first.x === second.x && first.y === second.y;
 
+  const obstacleLayout = [
+    { x: 4, y: 4 },
+    { x: 15, y: 4 },
+    { x: 4, y: 15 },
+    { x: 15, y: 15 }
+  ];
+
   function isSnakePoint(point) {
     return state.snake.some((segment) => samePoint(segment, point));
   }
@@ -45,7 +53,8 @@
     for (let y = 0; y < gridSize; y += 1) {
       for (let x = 0; x < gridSize; x += 1) {
         const point = { x, y };
-        if (!isSnakePoint(point) && (!state.enemy || !samePoint(point, state.enemy))) available.push(point);
+        const hitsObstacle = state.obstacles.some((obstacle) => samePoint(obstacle, point));
+        if (!isSnakePoint(point) && !hitsObstacle && (!state.enemy || !samePoint(point, state.enemy))) available.push(point);
       }
     }
     return available[Math.floor(Math.random() * available.length)] || { x: 1, y: 1 };
@@ -56,6 +65,7 @@
     state.direction = directions.right;
     state.nextDirection = directions.right;
     state.score = 0;
+    state.obstacles = obstacleLayout.map((point) => ({ ...point }));
     state.food = randomEmptyPoint();
     state.enemy = randomEmptyPoint();
     state.running = false;
@@ -123,7 +133,8 @@
   function moveEnemy() {
     const options = Object.values(directions).filter((direction) => {
       const next = { x: state.enemy.x + direction.x, y: state.enemy.y + direction.y };
-      return next.x >= 0 && next.x < gridSize && next.y >= 0 && next.y < gridSize && !isSnakePoint(next) && !samePoint(next, state.food);
+      const hitsObstacle = state.obstacles.some((obstacle) => samePoint(obstacle, next));
+      return next.x >= 0 && next.x < gridSize && next.y >= 0 && next.y < gridSize && !isSnakePoint(next) && !hitsObstacle && !samePoint(next, state.food);
     });
     if (options.length === 0) return;
     const direction = options[Math.floor(Math.random() * options.length)];
@@ -137,7 +148,8 @@
     const hitsWall = nextHead.x < 0 || nextHead.x >= gridSize || nextHead.y < 0 || nextHead.y >= gridSize;
     const hitsSelf = state.snake.some((segment) => samePoint(segment, nextHead));
     const hitsEnemy = samePoint(nextHead, state.enemy);
-    if (hitsWall || hitsSelf || hitsEnemy) {
+    const hitsObstacle = state.obstacles.some((obstacle) => samePoint(obstacle, nextHead));
+    if (hitsWall || hitsSelf || hitsEnemy || hitsObstacle) {
       endGame();
       render();
       return;
@@ -164,6 +176,7 @@
     context.fillStyle = '#071018';
     context.fillRect(0, 0, canvas.width, canvas.height);
     state.snake.forEach((segment, index) => drawCell(segment, index === 0 ? '#7dd3fc' : '#38bdf8'));
+    state.obstacles.forEach((obstacle) => drawCell(obstacle, '#64748b'));
     drawCell(state.food, '#fbbf24');
     drawCell(state.enemy, '#fb7185');
   }

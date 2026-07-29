@@ -37,15 +37,12 @@
 
       <section id="about" class="section" aria-labelledby="about-title">
         <div class="section-heading"><p class="eyebrow">About</p><h2 id="about-title">Researcher profile</h2></div>
-        <div class="profile-layout">
-          <img class="profile-photo" src="assets/profile.jpg" alt="Sangwoo Hwang profile photo">
-          <div>
+        <div class="profile-copy">
             <p>My research develops hardware-software co-design methods across AI model optimization, NPU architecture, quantization, sparsity, spiking neural networks, processing-in-memory, and chip-level implementation.</p>
             <p>My ultimate research goal is to enable ultra-low-power Physical AI by leveraging the binary nature of SNNs and full-stack optimization from algorithms to hardware architecture.</p>
             <div class="tag-list" aria-label="Research interests">
               <span>On-Device AI</span><span>Neuromorphic Computing</span><span>PIM</span><span>NPU Optimization</span>
             </div>
-          </div>
         </div>
       </section>
 
@@ -58,10 +55,22 @@
           <article class="info-card"><h3>Memory-centric AI</h3><p>PIM architecture and simulation for LLM and edge AI workloads, including 3D NAND Flash PIM research.</p></article>
         </div>
         <div class="publication-list">
-          <h3>Selected publications</h3>
-          <a href="https://ieeexplore.ieee.org/document/11408587/" rel="noopener"><span>GustavSNN</span><small>HPCA 2026 (Oral)</small></a>
-          <a href="https://neurips.cc/virtual/2024/poster/94181" rel="noopener"><span>SpikedAttention</span><small>NeurIPS 2024</small></a>
-          <a href="https://icml.cc/virtual/2026/poster/66147" rel="noopener"><span>PsumQuant</span><small>ICML 2026</small></a>
+          <h3>Peer-reviewed publications</h3>
+          <article class="publication-item"><a href="https://ieeexplore.ieee.org/document/11408587/" rel="noopener"><strong>GustavSNN: Unleashing the Power of Gustavson's Algorithm on SNN Acceleration with Column-Parallel Tick-Batch Dataflow</strong></a><small>HPCA 2026 (Oral) · Sangwoo Hwang*, Donghun Lee*, Jahyun Koo, Jaeha Kung</small><p>A sparse matrix computation accelerator for CNN- and Transformer-derived SNN workloads, with tape-out-oriented validation in 28nm FD-SOI.</p></article>
+          <article class="publication-item"><a href="https://neurips.cc/virtual/2024/poster/94181" rel="noopener"><strong>SpikedAttention: Training-Free and Fully Spike-Driven Transformer-to-SNN Conversion with Winner-Oriented Spike Shift for Softmax Operation</strong></a><small>NeurIPS 2024 · Sangwoo Hwang, Seunghyun Lee, Dahoon Park, Donghun Lee, Jaeha Kung</small><p>A training-free, fully spike-driven approach to Transformer-to-SNN conversion that addresses the softmax operation with winner-oriented spike shifting.</p></article>
+          <article class="publication-item"><a href="https://doi.org/10.1109/TETC.2024.3386893" rel="noopener"><strong>One-Spike SNN: Single-Spike Phase Coding with Base Manipulation for ANN-to-SNN Conversion Loss Minimization</strong></a><small>IEEE TETC 2024 · Sangwoo Hwang, Jaeha Kung</small><p>A single-spike phase-coding method using base manipulation to reduce loss during ANN-to-SNN conversion.</p></article>
+          <article class="publication-item"><a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1161592/full" rel="noopener"><strong>ReplaceNet: Real-Time Replacement of a Biological Neural Circuit with a Hardware-Assisted Spiking Neural Network</strong></a><small>Frontiers in Neuroscience 2023 · Sangwoo Hwang, Yujin Hwang, Duhee Kim, Junhee Lee, Han Kyoung Choe, Junghyup Lee, Hongki Kang, Jaeha Kung</small><p>A real-time FPGA-based SNN training and inference environment for biological neural replacement and biosignal applications.</p></article>
+          <article class="publication-item"><a href="https://doi.org/10.1109/ISCAS51556.2021.9401085" rel="noopener"><strong>Adaptive Input-to-Neuron Interlink Development in Training of Spike-Based Liquid State Machines</strong></a><small>ISCAS 2021 · Sangwoo Hwang, Junghyup Lee, Jaeha Kung</small><p>An adaptive input-to-neuron interlink method for training spike-based liquid state machines.</p></article>
+          <article class="publication-item"><a href="https://icml.cc/virtual/2026/poster/66147" rel="noopener"><strong>PsumQuant: In-line Post-training Partial Sum Quantizer for Energy Efficient NPU Inference</strong></a><small>ICML 2026 · Sangwoo Hwang, Yeeun Hong, Jaeha Kung</small><p>An in-line post-training partial-sum quantization method targeting energy-efficient NPU inference.</p></article>
+          <article class="publication-item"><a href="https://arxiv.org/abs/2605.24391" rel="noopener"><strong>MX-SAFE: Versatile Inference- and Training-Proof Microscaling Format with On-the-Fly Exponent and Mantissa Bit Allocation</strong></a><small>DATE 2026 · Dahoon Park*, Jahyun Koo*, Sangwoo Hwang, Jaeha Kung</small><p>A microscaling format with on-the-fly exponent and mantissa bit allocation for inference and training workloads.</p></article>
+          <article class="publication-item"><div><strong>Dissecting and Re-architecting 3D NAND Flash PIM Arrays for Efficient Single-Batch Token Generation in LLMs</strong></div><small>ICCD 2025 · Yongjoo Jang, Sangwoo Hwang, Hojin Lee, Sangwoo Jung, Donghun Lee, Wonbo Shim, Jaeha Kung</small><p>A 3D NAND Flash processing-in-memory architecture study for efficient single-batch LLM token generation.</p></article>
+          <h3 class="subsection-title">Manuscripts under review</h3>
+          <ul class="review-list">
+            <li><strong>ADC-Tuner: Pushing the Limit of ADC Resolution by Hessian-Guided Distribution-Aware Reference Voltage Tuning</strong><small>First author · Theme 2</small></li>
+            <li><strong>Bridging Neural Operators and Numerical Solvers: FNO-Initialized Accelerator for Solving 3D PDEs</strong><small>Co-author · Theme 2</small></li>
+            <li><strong>FIFA: FP Quantization-Based Mitigation of Integer Bit-Flip Attack with Zero Overhead by Leveraging Most Significant Bit Robustness of FP Weights</strong><small>Co-author · Theme 2</small></li>
+            <li><strong>MX-SAFE+: Universal Microscaling Format with Sign-Aware Asymmetric Exponent-Only Scaling and Dynamic Bit Allocation</strong><small>Co-author · Theme 2</small></li>
+          </ul>
         </div>
       </section>
 
@@ -106,7 +115,7 @@
             <button type="button" data-direction="up" aria-label="Move up">↑</button>
             <div><button type="button" data-direction="left" aria-label="Move left">←</button><button type="button" data-direction="down" aria-label="Move down">↓</button><button type="button" data-direction="right" aria-label="Move right">→</button></div>
           </div>
-          <p class="game-help">Use Arrow keys or WASD. Space pauses. Avoid the walls, yourself, and the moving enemy.</p>
+          <p class="game-help">Use Arrow keys or WASD. Space pauses. Avoid the walls, yourself, the obstacles, and the moving enemy.</p>
         </div>
       </section>
 
