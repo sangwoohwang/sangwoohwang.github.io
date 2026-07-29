@@ -64,7 +64,9 @@ h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
 .info-card { background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; }
 .info-card h3, .publication-list h3, .timeline h3 { margin-top: 0; }
 .publication-list { margin-top: 3rem; }
-.publication-theme { border-left: 3px solid var(--accent); color: var(--accent); margin: 1.5rem 0 0; padding: 0.35rem 0.75rem; }
+.publication-theme { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); margin: 2rem 0 0.35rem; padding: 0.8rem 1rem; }
+.publication-theme h4 { color: var(--accent); margin: 0; }
+.publication-theme p { color: var(--muted); font-size: 0.92rem; margin: 0.25rem 0 0; }
 .publication-item { border-top: 1px solid var(--border); padding: 1rem 0; }
 .publication-item a { text-decoration: none; }
 .publication-item a:hover, .publication-item a:focus-visible { color: var(--accent); }
